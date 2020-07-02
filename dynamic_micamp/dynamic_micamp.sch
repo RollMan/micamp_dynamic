@@ -28,21 +28,6 @@ F 6 "N" H 1250 2050 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Regulator_Linear:L7805 U2
-U 1 1 5EFC8F35
-P 3250 1850
-F 0 "U2" H 3250 2092 50  0000 C CNN
-F 1 "L7805" H 3250 2001 50  0000 C CNN
-F 2 "" H 3275 1700 50  0001 L CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 3250 1800 50  0001 C CNN
-F 4 "X" H 3250 1850 50  0001 C CNN "Spice_Primitive"
-F 5 "lm7805C" H 3250 1850 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 3250 1850 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "cadlab.lib" H 3250 1850 50  0001 C CNN "Spice_Lib_File"
-	1    3250 1850
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:CP C3
 U 1 1 5EFCAD44
 P 2650 2000
@@ -65,20 +50,13 @@ F 3 "~" H 3950 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 1950 1700 1950
-Wire Wire Line
 	1800 1950 1800 1850
-Wire Wire Line
-	1800 1850 2050 1850
 Wire Wire Line
 	2950 1850 2650 1850
 Connection ~ 2650 1850
 Wire Wire Line
 	3250 2150 2650 2150
 Connection ~ 2650 2150
-Wire Wire Line
-	3250 2150 3950 2150
-Connection ~ 3250 2150
 $Comp
 L Device:C C6
 U 1 1 5EFCDD75
@@ -91,11 +69,7 @@ F 3 "~" H 4450 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3950 1850 4450 1850
-Connection ~ 3950 1850
-Wire Wire Line
 	3950 1850 3950 2150
-Connection ~ 4450 1850
 Wire Wire Line
 	4450 1850 4800 1850
 Connection ~ 3950 2150
@@ -104,17 +78,6 @@ Wire Wire Line
 Wire Wire Line
 	4450 2150 4800 2150
 Connection ~ 4450 2150
-$Comp
-L power:VCC #PWR06
-U 1 1 5EFCFCE7
-P 4800 1850
-F 0 "#PWR06" H 4800 1700 50  0001 C CNN
-F 1 "VCC" H 4817 2023 50  0000 C CNN
-F 2 "" H 4800 1850 50  0001 C CNN
-F 3 "" H 4800 1850 50  0001 C CNN
-	1    4800 1850
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR07
 U 1 1 5EFD0BBD
@@ -126,20 +89,6 @@ F 3 "" H 4800 2150 50  0001 C CNN
 	1    4800 2150
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:PWR_FLAG #FLG01
-U 1 1 5EFD11B4
-P 2050 1850
-F 0 "#FLG01" H 2050 1925 50  0001 C CNN
-F 1 "PWR_FLAG" H 2050 2023 50  0000 C CNN
-F 2 "" H 2050 1850 50  0001 C CNN
-F 3 "~" H 2050 1850 50  0001 C CNN
-	1    2050 1850
-	1    0    0    -1  
-$EndComp
-Connection ~ 2050 1850
-Wire Wire Line
-	2050 1850 2650 1850
 $Comp
 L Connector:AudioJack3 J1
 U 1 1 5EFD4090
@@ -167,11 +116,7 @@ $EndComp
 Wire Wire Line
 	1150 3600 1250 3600
 Wire Wire Line
-	1250 3600 1250 3750
-Wire Wire Line
 	1150 3400 1250 3400
-Wire Wire Line
-	1250 3400 1250 3050
 Wire Wire Line
 	1150 3500 1250 3500
 Wire Wire Line
@@ -182,42 +127,11 @@ L Device:C C1
 U 1 1 5EFD7305
 P 1800 3000
 F 0 "C1" V 1548 3000 50  0000 C CNN
-F 1 "C" V 1639 3000 50  0000 C CNN
+F 1 "100u" V 1639 3000 50  0000 C CNN
 F 2 "" H 1838 2850 50  0001 C CNN
 F 3 "~" H 1800 3000 50  0001 C CNN
 	1    1800 3000
 	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1250 3000 1550 3000
-Wire Wire Line
-	1550 3000 1550 3650
-Connection ~ 1550 3000
-Wire Wire Line
-	1550 3000 1650 3000
-$Comp
-L Device:R R1
-U 1 1 5EFF6AD7
-P 1550 3800
-F 0 "R1" H 1620 3846 50  0000 L CNN
-F 1 "100k" H 1620 3755 50  0000 L CNN
-F 2 "" V 1480 3800 50  0001 C CNN
-F 3 "~" H 1550 3800 50  0001 C CNN
-	1    1550 3800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1550 3950 1550 4350
-$Comp
-L power:GND #PWR02
-U 1 1 5EFF79E3
-P 1550 4350
-F 0 "#PWR02" H 1550 4100 50  0001 C CNN
-F 1 "GND" H 1555 4177 50  0000 C CNN
-F 2 "" H 1550 4350 50  0001 C CNN
-F 3 "" H 1550 4350 50  0001 C CNN
-	1    1550 4350
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3150 3600 3500 3600
@@ -259,7 +173,7 @@ L Device:R R2
 U 1 1 5EFE0232
 P 2100 3800
 F 0 "R2" H 2170 3846 50  0000 L CNN
-F 1 "50k" H 2170 3755 50  0000 L CNN
+F 1 "100k" H 2170 3755 50  0000 L CNN
 F 2 "" V 2030 3800 50  0001 C CNN
 F 3 "~" H 2100 3800 50  0001 C CNN
 	1    2100 3800
@@ -285,7 +199,7 @@ L Device:CP C2
 U 1 1 5EFDCD4F
 P 2500 4150
 F 0 "C2" H 2618 4196 50  0000 L CNN
-F 1 "10u" H 2618 4105 50  0000 L CNN
+F 1 "22u" H 2618 4105 50  0000 L CNN
 F 2 "" H 2538 4000 50  0001 C CNN
 F 3 "~" H 2500 4150 50  0001 C CNN
 	1    2500 4150
@@ -450,7 +364,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 3000 6500 3700
 Wire Wire Line
-	6250 3100 6650 3100
+	6250 3100 6300 3100
 Wire Wire Line
 	6650 3100 6650 3200
 Wire Wire Line
@@ -469,78 +383,6 @@ F 3 "" H 6500 3700 50  0001 C CNN
 	1    6500 3700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3550 1850 3950 1850
-Wire Wire Line
-	1550 2150 1700 2150
-Wire Wire Line
-	750  1550 1700 1550
-Wire Wire Line
-	1700 1550 1700 1950
-Connection ~ 1700 1950
-Wire Wire Line
-	1700 1950 1800 1950
-Wire Wire Line
-	750  2400 1700 2400
-Wire Wire Line
-	1700 2400 1700 2150
-Connection ~ 1700 2150
-Wire Wire Line
-	1700 2150 2650 2150
-$Comp
-L Simulation_SPICE:VSIN V2
-U 1 1 5F036F2A
-P 200 3450
-F 0 "V2" H 330 3541 50  0000 L CNN
-F 1 "VSIN" H 330 3450 50  0000 L CNN
-F 2 "" H 200 3450 50  0001 C CNN
-F 3 "~" H 200 3450 50  0001 C CNN
-F 4 "Y" H 200 3450 50  0001 L CNN "Spice_Netlist_Enabled"
-F 5 "V" H 200 3450 50  0001 L CNN "Spice_Primitive"
-F 6 "ac 1k sin(0 0.001 1k)" H 330 3359 50  0000 L CNN "Spice_Model"
-	1    200  3450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	200  3650 200  3750
-Wire Wire Line
-	200  3750 1250 3750
-Connection ~ 1250 3750
-Wire Wire Line
-	1250 3750 1250 3800
-Wire Wire Line
-	200  3250 200  3050
-Wire Wire Line
-	200  3050 1250 3050
-Connection ~ 1250 3050
-Wire Wire Line
-	1250 3050 1250 3000
-$Comp
-L Simulation_SPICE:VDC V1
-U 1 1 5F03DC17
-P 200 2050
-F 0 "V1" H 330 2141 50  0000 L CNN
-F 1 "VDC" H 330 2050 50  0000 L CNN
-F 2 "" H 200 2050 50  0001 C CNN
-F 3 "~" H 200 2050 50  0001 C CNN
-F 4 "Y" H 200 2050 50  0001 L CNN "Spice_Netlist_Enabled"
-F 5 "V" H 200 2050 50  0001 L CNN "Spice_Primitive"
-F 6 "dc 12 ac 0 pwl(10000 12)" H 330 1959 50  0000 L CNN "Spice_Model"
-	1    200  2050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	200  1850 750  1850
-Wire Wire Line
-	750  1550 750  1850
-Wire Wire Line
-	200  2250 750  2250
-Wire Wire Line
-	750  2250 750  2400
-Text Label 650  3050 0    50   ~ 0
-vin
-Text Label 6300 3100 0    50   ~ 0
-vout
 $Comp
 L Simulation_SPICE:OPAMP U1
 U 1 1 5F050EDE
@@ -551,8 +393,8 @@ F 2 "" H 3000 3100 50  0001 C CNN
 F 3 "~" H 3000 3100 50  0001 C CNN
 F 4 "Y" H 3000 3100 50  0001 L CNN "Spice_Netlist_Enabled"
 F 5 "X" H 3000 3100 50  0001 L CNN "Spice_Primitive"
-F 6 "LM318" H 3000 3100 50  0001 C CNN "Spice_Model"
-F 7 "cadlab.lib" H 3000 3100 50  0001 C CNN "Spice_Lib_File"
+F 6 "njm4580_s" H 3000 3100 50  0001 C CNN "Spice_Model"
+F 7 "njm4580_v2.lib" H 3000 3100 50  0001 C CNN "Spice_Lib_File"
 F 8 "1 2 4 5 3" H 3000 3100 50  0001 C CNN "Spice_Node_Sequence"
 	1    3000 3100
 	1    0    0    -1  
@@ -596,8 +438,8 @@ F 2 "" H 4800 3100 50  0001 C CNN
 F 3 "~" H 4800 3100 50  0001 C CNN
 F 4 "Y" H 4800 3100 50  0001 L CNN "Spice_Netlist_Enabled"
 F 5 "X" H 4800 3100 50  0001 L CNN "Spice_Primitive"
-F 6 "LM318" H 4800 3100 50  0001 C CNN "Spice_Model"
-F 7 "cadlab.lib" H 4800 3100 50  0001 C CNN "Spice_Lib_File"
+F 6 "njm4580_s" H 4800 3100 50  0001 C CNN "Spice_Model"
+F 7 "njm4580_v2.lib" H 4800 3100 50  0001 C CNN "Spice_Lib_File"
 F 8 "1 2 4 5 3" H 4800 3100 50  0001 C CNN "Spice_Node_Sequence"
 	1    4800 3100
 	1    0    0    -1  
@@ -633,4 +475,120 @@ F 3 "" H 4700 3400 50  0001 C CNN
 	1    4700 3400
 	1    0    0    -1  
 $EndComp
+$Comp
+L pspice:R RV1
+U 1 1 5EFF5423
+P 6300 3600
+F 0 "RV1" H 6368 3646 50  0000 L CNN
+F 1 "10Meg" H 6368 3555 50  0000 L CNN
+F 2 "" H 6300 3600 50  0001 C CNN
+F 3 "~" H 6300 3600 50  0001 C CNN
+	1    6300 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3100 6300 3350
+Connection ~ 6300 3100
+Wire Wire Line
+	6300 3100 6650 3100
+Wire Wire Line
+	6300 3850 6300 4100
+$Comp
+L power:GND #PWR0101
+U 1 1 5EFF975B
+P 6300 4100
+F 0 "#PWR0101" H 6300 3850 50  0001 C CNN
+F 1 "GND" H 6305 3927 50  0000 C CNN
+F 2 "" H 6300 4100 50  0001 C CNN
+F 3 "" H 6300 4100 50  0001 C CNN
+	1    6300 4100
+	1    0    0    -1  
+$EndComp
+Connection ~ 4450 1850
+Wire Wire Line
+	3550 1850 3950 1850
+Wire Wire Line
+	3950 1850 4450 1850
+Connection ~ 3950 1850
+Connection ~ 3250 2150
+Wire Wire Line
+	3250 2150 3950 2150
+$Comp
+L Regulator_Linear:L7805 U2
+U 1 1 5EFC8F35
+P 3250 1850
+F 0 "U2" H 3250 2092 50  0000 C CNN
+F 1 "L7805" H 3250 2001 50  0000 C CNN
+F 2 "" H 3275 1700 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 3250 1800 50  0001 C CNN
+F 4 "X" H 3250 1850 50  0001 C CNN "Spice_Primitive"
+F 5 "LM7805" H 3250 1850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3250 1850 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "lm78xx.lib" H 3250 1850 50  0001 C CNN "Spice_Lib_File"
+	1    3250 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR06
+U 1 1 5EFCFCE7
+P 4800 1850
+F 0 "#PWR06" H 4800 1700 50  0001 C CNN
+F 1 "VCC" H 4817 2023 50  0000 C CNN
+F 2 "" H 4800 1850 50  0001 C CNN
+F 3 "" H 4800 1850 50  0001 C CNN
+	1    4800 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 1850 2000 1850
+Wire Wire Line
+	1250 3000 1650 3000
+$Comp
+L Device:R R1
+U 1 1 5EFF6AD7
+P 2100 2750
+F 0 "R1" H 2170 2796 50  0000 L CNN
+F 1 "100k" H 2170 2705 50  0000 L CNN
+F 2 "" V 2030 2750 50  0001 C CNN
+F 3 "~" H 2100 2750 50  0001 C CNN
+	1    2100 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 2900 2100 3000
+Wire Wire Line
+	2100 2600 2100 2500
+$Comp
+L power:VCC #PWR02
+U 1 1 5F0130B3
+P 2100 2500
+F 0 "#PWR02" H 2100 2350 50  0001 C CNN
+F 1 "VCC" H 2117 2673 50  0000 C CNN
+F 2 "" H 2100 2500 50  0001 C CNN
+F 3 "" H 2100 2500 50  0001 C CNN
+	1    2100 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 2150 2650 2150
+Wire Wire Line
+	1550 1950 1800 1950
+Wire Wire Line
+	1250 3600 1250 3800
+Wire Wire Line
+	1250 3000 1250 3400
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5F014817
+P 2000 1850
+F 0 "#FLG01" H 2000 1925 50  0001 C CNN
+F 1 "PWR_FLAG" H 2000 2023 50  0000 C CNN
+F 2 "" H 2000 1850 50  0001 C CNN
+F 3 "~" H 2000 1850 50  0001 C CNN
+	1    2000 1850
+	1    0    0    -1  
+$EndComp
+Connection ~ 2000 1850
+Wire Wire Line
+	2000 1850 2650 1850
 $EndSCHEMATC
