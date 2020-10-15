@@ -2,8 +2,8 @@ Circuit: * F:\Documents\dynamic_micamp\dynamic_micamp_ltspice.asc
 
 Direct Newton iteration for .op point succeeded.
 
-Date: Thu Jul 02 16:16:01 2020
-Total elapsed time: 0.033 seconds.
+Date: Sun Oct 11 21:09:35 2020
+Total elapsed time: 0.093 seconds.
 
 tnom = 27
 temp = 27
